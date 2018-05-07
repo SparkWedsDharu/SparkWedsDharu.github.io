@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n\r\n<video  loop id=\"myVideo\" autoplay \r\n  src=\"./assets/videos/lightning0.mp4\" \r\n  poster=\"./assets/images/wedding.jpg\">  \r\n</video>\r\n\r\n\r\n<div class=\"content\">\r\n  <app-couple></app-couple>\r\n <!--  <button id=\"myBtn\" (click)=\"myFunction()\">{{btnText}}</button> -->\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n\r\n<video  loop id=\"myVideo\" autoplay \r\n  src=\"./assets/videos/lightning0.mp4\" >\r\n   \r\n</video>\r\n//poster=\"./assets/images/wedding.jpg\"\r\n\r\n<div class=\"content\">\r\n  <app-couple></app-couple>\r\n <!--  <button id=\"myBtn\" (click)=\"myFunction()\">{{btnText}}</button> -->\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
