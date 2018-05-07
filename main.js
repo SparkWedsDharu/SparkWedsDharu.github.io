@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "p{\r\n\tcolor:red;\r\n\r\n}"
+module.exports = ""
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "p{\r\n\tcolor:red;\r\n\r\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n <!-- <video autoplay loop controls width=\"100%\" height=\"100%\" class=\"bg-vid\">\r\n   <source src=\"./assets/videos/lightning1.mp4\">\r\n   <source src=\"./assets/videos/lightning1.webm\" >\r\n </video> -->\r\n\r\n<video autoplay muted loop id=\"myVideo\">\r\n  <source src=\"./assets/videos/lightning0.mp4\" type=\"video/mp4\">\r\n  Your browser does not support HTML5 video.\r\n</video>\r\n\r\n<div class=\"content\">\r\n  <h1>\r\n    Spartagus <p>Weds </p> Dharani Sri\r\n  </h1>\r\n  <button id=\"myBtn\" onclick=\"myFunction()\">Pause</button>\r\n</div>\r\n\r\n\r\n\r\n<script>\r\nvar video = document.getElementById(\"myVideo\");\r\nvar btn = document.getElementById(\"myBtn\");\r\n\r\nfunction myFunction() {\r\n  if (video.paused) {\r\n    video.play();\r\n    btn.innerHTML = \"Pause\";\r\n  } else {\r\n    video.pause();\r\n    btn.innerHTML = \"Play\";\r\n  }\r\n}\r\n</script>\r\n\r\n\r\n\r\n\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n\r\n<video  loop id=\"myVideo\" autoplay \r\n  src=\"./assets/videos/lightning0.mp4\" \r\n  poster=\"./assets/images/wedding.jpg\">  \r\n</video>\r\n\r\n\r\n<div class=\"content\">\r\n  <app-couple></app-couple>\r\n <!--  <button id=\"myBtn\" (click)=\"myFunction()\">{{btnText}}</button> -->\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -66,7 +66,19 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app';
+        this.status = false;
+        this.btnText = "mute";
     }
+    AppComponent.prototype.myFunction = function () {
+        if (this.status == true) {
+            this.status = true;
+            this.btnText = "Un mute";
+        }
+        else {
+            this.status = false;
+            this.btnText = "mute";
+        }
+    };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
@@ -93,7 +105,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/esm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/esm5/core.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/esm5/animations.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _couple_couple_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./couple/couple.component */ "./src/app/couple/couple.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -103,22 +118,112 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
+                _couple_couple_component__WEBPACK_IMPORTED_MODULE_5__["CoupleComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/couple/couple.component.css":
+/*!*********************************************!*\
+  !*** ./src/app/couple/couple.component.css ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "p{\r\n\tcolor:red;\r\n\r\n}"
+
+/***/ }),
+
+/***/ "./src/app/couple/couple.component.html":
+/*!**********************************************!*\
+  !*** ./src/app/couple/couple.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<!-- <div >\n  <h1>\n    Spartagus <p>Weds </p> Dharani Sri\n  </h1>\n</div> -->\n\n<div [@goals]=\"goals.length\" id=\"goal-list\">\n\t\t\n\t\t\t<h1 *ngFor= \"let goal of goals\"> {{goal}}</h1>\n\t\t\n\t</div>"
+
+/***/ }),
+
+/***/ "./src/app/couple/couple.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/couple/couple.component.ts ***!
+  \********************************************/
+/*! exports provided: CoupleComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoupleComponent", function() { return CoupleComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm5/animations.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+//import { ActivatedRoute } from '@angular/router';
+var CoupleComponent = (function () {
+    // constructor(private route: ActivatedRoute) { 
+    //   this.route.params.subscribe(res => console.log(res.id))
+    // }
+    function CoupleComponent() {
+        this.goals = ["Spartagus", "Weds", "Dharani Sri"];
+    }
+    CoupleComponent.prototype.ngOnInit = function () {
+    };
+    CoupleComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-couple',
+            template: __webpack_require__(/*! ./couple.component.html */ "./src/app/couple/couple.component.html"),
+            styles: [__webpack_require__(/*! ./couple.component.css */ "./src/app/couple/couple.component.css")],
+            animations: [
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["trigger"])('goals', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["transition"])('* => *', [
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: 0 }), { optional: true }),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["stagger"])('1300ms', [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('5s ease-in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["keyframes"])([
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: 0, transform: 'translateX(75%)', offset: 0 }),
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: .5, transform: 'translateY(135px)', offset: 0.5 }),
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: 1, transform: 'translateY(0)', offset: 1 })
+                            ]))
+                        ]), { optional: true })
+                    ])
+                ])
+            ]
+        }),
+        __metadata("design:paramtypes", [])
+    ], CoupleComponent);
+    return CoupleComponent;
 }());
 
 
