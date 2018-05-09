@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n\r\n<video  loop id=\"myVideo\" autoplay \r\n  src=\"./assets/videos/lightning0.mp4\" >\r\n   \r\n</video>\r\n\r\n\r\n<div class=\"content\">\r\n  <app-couple></app-couple>\r\n <!--  <button id=\"myBtn\" (click)=\"myFunction()\">{{btnText}}</button> -->\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n\r\n<video id=\"myVideo\" autoplay loop>\r\n  <source src=\"./assets/videos/lightning0.mp4\" type=\"video/mp4\">\r\n  <!-- <poster src=\"./assets/images/wedding.gif type=\"image/gif\"> -->\r\n  \r\n</video>\r\n\r\n\r\n<div class=\"content\">\r\n  <app-couple></app-couple>\r\n  <!-- <button id=\"myBtn\" (click)=\"myFunction()\">{{btnText}}</button> -->\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -153,7 +153,7 @@ var AppModule = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "p{\r\n\tcolor:red;\r\n\r\n}"
+module.exports = "h1:nth-of-type(2){\r\n\tcolor:red;\r\n\r\n}"
 
 /***/ }),
 
@@ -210,10 +210,14 @@ var CoupleComponent = (function () {
                 Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["trigger"])('goals', [
                     Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["transition"])('* => *', [
                         Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: 0 }), { optional: true }),
-                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["stagger"])('1300ms', [
-                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('5s ease-in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["keyframes"])([
-                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: 0, transform: 'translateX(75%)', offset: 0 }),
-                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: .5, transform: 'translateY(135px)', offset: 0.5 }),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["stagger"])('2500ms', [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('20s ease-in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["keyframes"])([
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: 0, transform: 'translateX(50%)', offset: 0 }),
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: .5, transform: 'translateY(35px)', offset: 0.166 }),
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: 0.5, transform: 'translateX(75%)', offset: 0.33 }),
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: .5, transform: 'translateY(335px)', offset: 0.5 }),
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: .5, transform: 'translateX(5%)', offset: 0.666 }),
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: .5, transform: 'translateY(35px)', offset: 0.833 }),
                                 Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: 1, transform: 'translateY(0)', offset: 1 })
                             ]))
                         ]), { optional: true })
