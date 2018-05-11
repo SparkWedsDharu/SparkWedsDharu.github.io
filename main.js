@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n\r\n<video id=\"myVideo\" autoplay loop>\r\n  <source src=\"./assets/videos/lightning0.mp4\" type=\"video/mp4\">\r\n  <!-- <poster src=\"./assets/images/wedding.gif type=\"image/gif\"> -->\r\n  \r\n</video>\r\n\r\n\r\n<div class=\"content\">\r\n  <app-couple></app-couple>\r\n  <!-- <button id=\"myBtn\" (click)=\"myFunction()\">{{btnText}}</button> -->\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n\r\n<video id=\"myVideo\" autoplay loop [innerHtml]=\"htmlToAdd\" >\r\n  <!-- <source *ngIf={{mobdevice}} src=\"./assets/videos/mobilebg.mp4\" type=\"video/mp4\">\r\n  <source *ngIf={{!mobdevice}} src=\"./assets/videos/lightning0.mp4\" type=\"video/mp4\"> -->\r\n\r\n  <!-- <poster src=\"./assets/images/wedding.gif type=\"image/gif\"> -->\r\n  \r\n\r\n</video>\r\n\r\n\r\n<div class=\"content\">\r\n  <app-couple></app-couple>\r\n  <!-- <button id=\"myBtn\" (click)=\"myFunction()\">{{btnText}}</button> -->\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -62,29 +62,41 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
+//import { Router } from '@angular/router';
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app';
         this.status = false;
         this.btnText = "mute";
+        this.mobHeight = window.screen.height;
+        this.mobWidth = window.screen.width;
+        console.log(this.mobHeight);
+        console.log(this.mobWidth);
     }
-    AppComponent.prototype.myFunction = function () {
-        if (this.status == true) {
-            this.status = true;
-            this.btnText = "Un mute";
+    AppComponent.prototype.ngOnInit = function () {
+        if (this.mobWidth < 1200) {
+            //It is a small screen
+            // this.mobdevice = true;
+            this.htmlToAdd = '<source src="./assets/videos/mobilebg.mp4" type="video/mp4">';
         }
         else {
-            this.status = false;
-            this.btnText = "mute";
+            //It is a big screen or desktop
+            // this.mobdevice = false;
+            this.htmlToAdd = '<source src="./assets/videos/lightning0.mp4" type="video/mp4">';
         }
+        console.log(this.htmlToAdd);
     };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
-        })
+        }),
+        __metadata("design:paramtypes", [])
     ], AppComponent);
     return AppComponent;
 }());
