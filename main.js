@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#myVideo{\r\n\topacity: 50%;\r\n}"
+module.exports = ".gif-bck{\r\n    position: fixed;\r\n    right: 0;\r\n    bottom: 0;\r\n    min-width: 100%; \r\n    min-height: 100%;\r\n}"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "#myVideo{\r\n\topacity: 50%;\r\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n\r\n<video id=\"myVideo\" autoplay loop controls [innerHtml]=\"htmlToAdd\" >\r\n  <!-- <source *ngIf={{mobdevice}} src=\"./assets/videos/mobilebg.mp4\" type=\"video/mp4\">\r\n  <source *ngIf={{!mobdevice}} src=\"./assets/videos/lightning0.mp4\" type=\"video/mp4\"> -->\r\n\r\n  <!-- <poster src=\"./assets/images/wedding.gif type=\"image/gif\"> -->\r\n  \r\n\r\n</video>\r\n\r\n\r\n<div >\r\n  <app-couple></app-couple>\r\n  <!-- <button id=\"myBtn\" (click)=\"myFunction()\">{{btnText}}</button> -->\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n\r\n<video *ngIf=\"mobdevice\" id=\"myVideo\" autoplay loop controls [innerHtml]=\"htmlToAdd\" >\r\n  <!-- <source *ngIf={{mobdevice}} src=\"./assets/videos/mobilebg.mp4\" type=\"video/mp4\">\r\n  <source *ngIf={{!mobdevice}} src=\"./assets/videos/lightning0.mp4\" type=\"video/mp4\"> -->\r\n\r\n  <!-- <poster src=\"./assets/images/wedding.gif type=\"image/gif\"> -->  \r\n\r\n</video>\r\n\r\n<div class=\"gif-bck\" *ngIf=\"!mobdevice\"><img src=\"./assets/images/weddingmb.gif\" type=\"image/gif\"></div>\r\n\r\n<audio *ngIf=\"!mobdevice\" autoplay loop>\r\n  <source src=\"./assets/audio/mbaudio.ogg\" type=\"audio/ogg\">\r\n  <source src=\"./assets/audio/mbaudio.mp3\" type=\"audio/mp3\">\r\nYour browser does not support the audio element.\r\n</audio>\r\n\r\n\r\n<div >\r\n  <app-couple></app-couple>\r\n  <!-- <button id=\"myBtn\" (click)=\"myFunction()\">{{btnText}}</button> -->\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -72,21 +72,25 @@ var AppComponent = (function () {
         this.title = 'app';
         this.status = false;
         this.btnText = "mute";
+        this.mobdevice = true;
         this.mobHeight = window.screen.height;
         this.mobWidth = window.screen.width;
         console.log(this.mobHeight);
         console.log(this.mobWidth);
     }
     AppComponent.prototype.ngOnInit = function () {
-        if (this.mobWidth < 1200) {
+        if (this.mobWidth < 1200 && this.mobWidth > 425) {
             //It is a small screen
             // this.mobdevice = true;
             this.htmlToAdd = "<source src=\"./assets/videos/mobilebg.mp4\" type=\"video/mp4\">\n            <source src=\"./assets/videos/mobilebg.mpg\" type=\"video/mpg\">\n            <source src=\"./assets/videos/mobilebg.flv\" type=\"video/flv\">\n            <source src=\"./assets/videos/mobilebg.avi\" type=\"video/avi\">\n            <source src=\"./assets/videos/mobilebg.3gp\" type=\"video/3gp\"> ";
         }
-        else {
+        else if (this.mobWidth > 1200) {
             //It is a big screen or desktop
             // this.mobdevice = false;
             this.htmlToAdd = '<source src="./assets/videos/lightning0.mp4" type="video/mp4">';
+        }
+        else {
+            this.mobdevice = false;
         }
         console.log(this.htmlToAdd);
     };
@@ -165,7 +169,7 @@ var AppModule = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h1:nth-of-type(2){\r\n\tcolor:red;\r\n}\r\nh1:nth-of-type(1){\r\n\tfont-weight: bold;\r\n}\r\n#goal-list{\r\n\ttext-align: center;\r\n}\r\n.wrapper{\r\n\tmargin: 2%;\r\n\tbackground: rgba(0, 0, 0, 0.5);\r\n\tmargin-bottom: 10px;\t\r\n    width: 96%;\r\n    min-height: 70%;\r\n    position: fixed;\r\n    border-radius:15px;\r\n}\r\n.wrap{\r\n\tpadding: 20px;\r\n    color: #f1f1f1;\r\n    text-align: center;\r\n}\r\nimg{\r\n\twidth: 180px;\r\n\theight:180px;\r\n\tborder-radius: 10px;\r\n}\r\n.dash-list{\r\n\tpadding:10px;\r\n}"
+module.exports = "h1:nth-of-type(2){\r\n\tcolor:red;\r\n}\r\nh1:nth-of-type(1),h1:nth-of-type(3){\r\n\tfont-weight: bold;\r\n}\r\n#goal-list{\r\n\ttext-align: center;\r\n}\r\n.wrapper{\r\n\tmargin: 2%;\r\n\tbackground: rgba(0, 0, 0, 0.5);\r\n\tmargin-bottom: 10px;\t\r\n    width: 96%;\r\n    height: 97%;\r\n    position: fixed;\r\n    border-radius:15px;\r\n}\r\n.wrap{\r\n\tpadding: 20px;\r\n    color: #f1f1f1;\r\n    text-align: center;\r\n}\r\nimg{\r\n\twidth: 180px;\r\n\theight:180px;\r\n\tborder-radius: 10px;\r\n}\r\n.dash-list{\r\n\tpadding:10px;\r\n}"
 
 /***/ }),
 
