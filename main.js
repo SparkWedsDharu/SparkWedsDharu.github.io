@@ -41,7 +41,7 @@ module.exports = ".gif-bck{\r\n    position: fixed;\r\n    right: 0;\r\n    bott
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n\r\n<video *ngIf=\"mobdevice\" id=\"myVideo\" autoplay loop controls [innerHtml]=\"htmlToAdd\" >\r\n  <!-- <source *ngIf={{mobdevice}} src=\"./assets/videos/mobilebg.mp4\" type=\"video/mp4\">\r\n  <source *ngIf={{!mobdevice}} src=\"./assets/videos/lightning0.mp4\" type=\"video/mp4\"> -->\r\n\r\n  <!-- <poster src=\"./assets/images/wedding.gif type=\"image/gif\"> -->  \r\n\r\n</video>\r\n\r\n<div *ngIf=\"!mobdevice\"><img class=\"gif-bck\" src=\"./assets/images/weddingmb.gif\" type=\"image/gif\"></div>\r\n\r\n<audio *ngIf=\"!mobdevice\" autoplay loop>\r\n  <source src=\"./assets/audio/mbaudio.ogg\" type=\"audio/ogg\">\r\n  <source src=\"./assets/audio/mbaudio.mp3\" type=\"audio/mp3\">\r\nYour browser does not support the audio element.\r\n</audio>\r\n\r\n\r\n<div >\r\n  <app-couple></app-couple>\r\n  <!-- <button id=\"myBtn\" (click)=\"myFunction()\">{{btnText}}</button> -->\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n\r\n<video *ngIf=\"mobdevice\" id=\"myVideo\" autoplay loop  [innerHtml]=\"htmlToAdd\" >\r\n  <!-- <source *ngIf={{mobdevice}} src=\"./assets/videos/mobilebg.mp4\" type=\"video/mp4\">\r\n  <source *ngIf={{!mobdevice}} src=\"./assets/videos/lightning0.mp4\" type=\"video/mp4\"> -->\r\n\r\n  <!-- <poster src=\"./assets/images/wedding.gif type=\"image/gif\"> -->  \r\n\r\n</video>\r\n\r\n<div *ngIf=\"!mobdevice\"><img class=\"gif-bck\" src=\"./assets/images/weddingmb.gif\" type=\"image/gif\"></div>\r\n\r\n<audio *ngIf=\"!mobdevice\" autoplay loop>\r\n  <source src=\"./assets/audio/mbaudio.ogg\" type=\"audio/ogg\">\r\n  <source src=\"./assets/audio/mbaudio.mp3\" type=\"audio/mp3\">\r\nYour browser does not support the audio element.\r\n</audio>\r\n\r\n\r\n<div >\r\n  <app-couple></app-couple>\r\n  <!-- <button id=\"myBtn\" (click)=\"myFunction()\">{{btnText}}</button> -->\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -135,6 +135,8 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+// import { HttpModule } from '@angular/http';
+// import { AgmCoreModule } from '@agm/core';
 
 
 var AppModule = (function () {
@@ -149,7 +151,7 @@ var AppModule = (function () {
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
-                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"]
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_3__["BrowserAnimationsModule"],
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -169,7 +171,7 @@ var AppModule = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h1:nth-of-type(2){\r\n\tcolor:red;\r\n\tfont-size: 12px;\r\n}\r\nh1(3){\r\n\tfont-weight: bold;\r\n}\r\n#goal-list{\r\n\ttext-align: center;\r\n}\r\n.wrapper{\r\n\tmargin: 2%;\r\n\tbackground: rgba(0, 0, 0, 0.5);\r\n\tmargin-bottom: 10px;\t\r\n    width: 96%;\r\n    height: 97%;\r\n    position: fixed;\r\n    border-radius:15px;\r\n}\r\n.wrap{\r\n\tpadding: 20px;\r\n    color: #f1f1f1;\r\n    text-align: center;\r\n}\r\nimg{\r\n\twidth: 180px;\r\n\theight:180px;\r\n\tborder-radius: 10px;\r\n}\r\n.dash-list{\r\n\tpadding:10px;\r\n}"
+module.exports = "h1:nth-of-type(2){\r\n\tcolor:red;\r\n}\r\nh1{\r\n\tfont-weight: bold;\r\n}\r\n#goal-list{\r\n\ttext-align: center;\r\n}\r\n.wrapper{\r\n\tmargin: 1%;\r\n\tbackground: rgba(0, 0, 0, 0.5);\r\n\tmargin-bottom: 10px;\t\r\n    width: 97%;\r\n    height: 96%;\r\n    position: fixed;\r\n    border-radius:15px;\r\n}\r\n.wrap{\r\n\tpadding: 3%;\r\n    color: #f1f1f1;\r\n    text-align: center;\r\n}\r\nimg{\r\n\twidth: 180px;\r\n\theight:180px;\r\n\tborder-radius: 10px;\r\n}\r\n.dash-list{\r\n\tpadding:10px;\r\n}\r\n.modal-title{\r\n\tfont-weight: bolder;\r\n\tcolor:white;\r\n}\r\n.modal-content{\r\n\t\r\n\tbackground-image: url('happy1.gif');\r\n\t /* Full height */\r\n    height: 100%; \r\n\r\n    /* Center and scale the image nicely */\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n    background-size: cover;\r\n    opacity: 0.9;\r\n}\r\n.modal-body{\r\n\tbackground: rgba(0, 0, 0, 0.5);\r\n    color: #f1f1f1;\r\n}"
 
 /***/ }),
 
@@ -180,7 +182,7 @@ module.exports = "h1:nth-of-type(2){\r\n\tcolor:red;\r\n\tfont-size: 12px;\r\n}\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div >\n  <h1>\n    Spartagus <p>Weds </p> Dharani Sri\n  </h1>\n</div> -->\n<div  class=\"wrapper\"></div>\n<div  class=\"container-fluid wrap\">\n\t\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-xs-12 col-lg-12\" [@goals]=\"goals.length\" id=\"goal-list\">\t\t\n\t\t\t\t<h1 *ngFor= \"let goal of goals\"> {{goal}}</h1>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div id=\"dash-list\">\n\t\t\t<div >\n\t\t\t\t<div class=\"row\" [@dash]=\"dash.length\">\n\t\t\t\t\t<div *ngFor= \"let im of dash ; let i=index\" class=\"col-xs-12 col-lg-3 col-md-3 dash-list\">\n\t\t\t\t\t\t<img src={{im}} type=\"image/gif\" (click)=\"displayme(i)\"></div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\n</div>"
+module.exports = "<!-- <div >\n  <h1>\n    Spartagus <p>Weds </p> Dharani Sri\n  </h1>\n</div> -->\n<div  class=\"wrapper\"></div>\n<div  class=\"container-fluid wrap\">\n\t\n<!-- \t\t<div class=\"row\">\n\t\t\t<div class=\"col-xs-12 col-lg-12\" [@goals]=\"goals.length\" id=\"goal-list\">\t\t\n\t\t\t\t<h1 *ngFor= \"let goal of goals\"> {{goal}}</h1>\n\t\t\t</div>\n\t\t</div> -->\n\n\t\t<div id=\"dash-list\">\n\t\t\t<div >\n\t\t\t\t<div class=\"row\" [@dash]=\"dash.length\">\n\t\t\t\t\t<div *ngFor= \"let im of dash \" class=\"col-xs-12 col-lg-3 col-md-3 dash-list\">\n\t\t\t\t\t\t<a href=\"#\" class=\"btn\"> <img src={{im.src}} type=\"image/gif\" [attr.data-target]=im.modal data-toggle=\"modal\"> </a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\t\n</div>\n\n<div class=\"modal fade\" id=\"myModal0\" role=\"dialog\">\n    <div class=\"modal-dialog\">\n    \n      <!-- Modal content-->\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n          <h2 class=\"modal-title\">Inviting You to our happiest moment of our life</h2>\n        </div>\n        <div class=\"modal-body\">\n          \t\t<div class=\"row\">\n\t\t\t<div class=\"col-xs-12 col-lg-12\" [@goals]=\"goals.length\" id=\"goal-list\">\t\t\n\t\t\t\t<h1 *ngFor= \"let goal of goals\"> {{goal}}</h1>\n\t\t\t</div>\n\t\t</div>\n        </div>\n        <!-- <div class=\"modal-footer\">\n          <img src=\"../../assets/images/happy1.gif\" type=\"image/gif\">\n        </div> -->\n      </div>\n      \n    </div>\n</div>\n<div class=\"modal fade\" id=\"myModal1\" role=\"dialog\">\n    <div class=\"modal-dialog\">\n    \n      <!-- Modal content-->\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n          <h4 class=\"modal-title\">Engagement</h4>\n        </div>\n        <div class=\"modal-body\">\n          <p>Some text in the modal.</p>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n      \n    </div>\n</div>\n<div class=\"modal fade\" id=\"myModal2\" role=\"dialog\">\n    <div class=\"modal-dialog\">\n    \n      <!-- Modal content-->\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n          <h4 class=\"modal-title\">Wedding</h4>\n        </div>\n        <div class=\"modal-body\">\n          <p>Some text in the modal.</p>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n      \n    </div>\n</div>\n<div class=\"modal fade\" id=\"myModal3\" role=\"dialog\">\n    <div class=\"modal-dialog\">\n    \n      <!-- Modal content-->\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n          <h4 class=\"modal-title\">Receptionr</h4>\n        </div>\n        <div class=\"modal-body\">\n          <p>Some text in the modal.</p>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n      \n    </div>\n</div>\n<div class=\"modal fade\" id=\"myModal4\" role=\"dialog\">\n    <div class=\"modal-dialog\">\n    \n      <!-- Modal content-->\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n          <h4 class=\"modal-title\">Location</h4>\n        </div>\n        <div class=\"modal-body\">\n          <p>Some text in the modal.</p>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n      \n    </div>\n</div>\n<div class=\"modal fade\" id=\"myModal5\" role=\"dialog\">\n    <div class=\"modal-dialog\">\n    \n      <!-- Modal content-->\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n          <h4 class=\"modal-title\">Contact</h4>\n        </div>\n        <div class=\"modal-body\">\n          <p>Some text in the modal.</p>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        </div>\n      </div>\n      \n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -214,7 +216,12 @@ var CoupleComponent = (function () {
     // }
     function CoupleComponent() {
         this.goals = ["Spartagus", "Weds", "Dharani Sri"];
-        this.dash = ["../../assets/images/welcome.gif", "../../assets/images/engage.gif", "../../assets/images/wed.gif", "../../assets/images/reception.gif", "../../assets/images/map.gif", "../../assets/images/contact.gif"];
+        this.dash = [{ "src": "../../assets/images/welcome.gif", "modal": "#myModal0" },
+            { "src": "../../assets/images/engage.gif", "modal": "#myModal1" },
+            { "src": "../../assets/images/wed.gif", "modal": "#myModal2" },
+            { "src": "../../assets/images/reception.gif", "modal": "#myModal3" },
+            { "src": "../../assets/images/map.gif", "modal": "#myModal4" },
+            { "src": "../../assets/images/contact.gif", "modal": "#myModal5" }];
         this.imagelist = ["welcome", "engagement", "wedding", "reception", "map", "contact"];
     }
     CoupleComponent.prototype.ngOnInit = function () {
