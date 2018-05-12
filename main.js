@@ -165,7 +165,7 @@ var AppModule = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h1:nth-of-type(2){\r\n\tcolor:red;\r\n}\r\nh1:nth-of-type(1){\r\n\tfont-weight: bold;\r\n}\r\n#goal-list{\r\n\ttext-align: center;\r\n}\r\n.wrapper{\r\n\tmargin-top: 20px;\r\n\tbackground: rgba(0, 0, 0, 0.5);\r\n\tmargin-bottom: 10px;\r\n\tcolor: #f1f1f1;\r\n    width: 98%;\r\n    min-height: 70%;\r\n    padding: 20px;\r\n    text-align: center;\r\n    position: fixed;\r\n    border-radius:15px;\r\n}\r\nimg{\r\n\twidth: 180px;\r\n\theight:180px;\r\n\tborder-radius: 10px;\r\n}\r\n.dash-list{\r\n\tpadding:10px;\r\n}"
+module.exports = "h1:nth-of-type(2){\r\n\tcolor:red;\r\n}\r\nh1:nth-of-type(1){\r\n\tfont-weight: bold;\r\n}\r\n#goal-list{\r\n\ttext-align: center;\r\n}\r\n.wrapper{\r\n\tmargin: 2%;\r\n\tbackground: rgba(0, 0, 0, 0.5);\r\n\tmargin-bottom: 10px;\t\r\n    width: 96%;\r\n    min-height: 70%;\r\n    position: fixed;\r\n    border-radius:15px;\r\n}\r\n.wrap{\r\n\tpadding: 20px;\r\n    color: #f1f1f1;\r\n    text-align: center;\r\n}\r\nimg{\r\n\twidth: 180px;\r\n\theight:180px;\r\n\tborder-radius: 10px;\r\n}\r\n.dash-list{\r\n\tpadding:10px;\r\n}"
 
 /***/ }),
 
@@ -176,7 +176,7 @@ module.exports = "h1:nth-of-type(2){\r\n\tcolor:red;\r\n}\r\nh1:nth-of-type(1){\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div >\n  <h1>\n    Spartagus <p>Weds </p> Dharani Sri\n  </h1>\n</div> -->\n<div  class=\"container-fluid\">\n\t<div  class=\"wrapper\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-xs-12 col-lg-12\" [@goals]=\"goals.length\" id=\"goal-list\">\t\t\n\t\t\t\t<h1 *ngFor= \"let goal of goals\"> {{goal}}</h1>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div id=\"dash-list\">\n\t\t\t<div >\n\t\t\t\t<div class=\"row\" [@dash]=\"dash.length\">\n\t\t\t\t\t<div *ngFor= \"let im of dash ; let i = index\" class=\"col-xs-12 col-lg-3 col-md-3 dash-list\">\n\t\t\t\t\t\t<img src={{im}} type=\"image/gif\" (click)=\"displayme(i)\"></div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>"
+module.exports = "<!-- <div >\n  <h1>\n    Spartagus <p>Weds </p> Dharani Sri\n  </h1>\n</div> -->\n<div  class=\"wrapper\"></div>\n<div  class=\"container-fluid wrap\">\n\t\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-xs-12 col-lg-12\" [@goals]=\"goals.length\" id=\"goal-list\">\t\t\n\t\t\t\t<h1 *ngFor= \"let goal of goals\"> {{goal}}</h1>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div id=\"dash-list\">\n\t\t\t<div >\n\t\t\t\t<div class=\"row\" [@dash]=\"dash.length\">\n\t\t\t\t\t<div *ngFor= \"let im of dash ; let i=index\" class=\"col-xs-12 col-lg-3 col-md-3 dash-list\">\n\t\t\t\t\t\t<img src={{im}} type=\"image/gif\" (click)=\"displayme(i)\"></div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\n</div>"
 
 /***/ }),
 
