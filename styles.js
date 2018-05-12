@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\r\n* {\r\n    box-sizing: border-box;\r\n}\r\nbody {\r\n    margin: 0;\r\n    font-family: Arial;\r\n    font-size: 17px;\r\n}\r\n#myVideo {\r\n    position: fixed;\r\n    right: 0;\r\n    bottom: 0;\r\n    min-width: 100%; \r\n    min-height: 100%;\r\n}\r\n.content {\r\n    position: fixed;\r\n    bottom: 10%;\r\n    background: rgba(0, 0, 0, 0.5);\r\n    color: #f1f1f1;\r\n    width: 100%;\r\n    min-height: 70%;\r\n    padding: 20px;\r\n    text-align: center;\r\n}\r\n#myBtn {\r\n    width: 200px;\r\n    font-size: 18px;\r\n    padding: 10px;\r\n    border: none;\r\n    background: #000;\r\n    color: #fff;\r\n    cursor: pointer;\r\n}\r\n#myBtn:hover {\r\n    background: #ddd;\r\n    color: black;\r\n}"
+module.exports = "/* You can add global styles to this file, and also import other style files */\r\n* {\r\n    box-sizing: border-box;\r\n}\r\nbody {\r\n    margin: 0;\r\n    font-family: Arial;\r\n    font-size: 17px;\r\n}\r\n#myVideo {\r\n    position: fixed;\r\n    right: 0;\r\n    bottom: 0;\r\n    min-width: 100%; \r\n    min-height: 100%;\r\n}\r\n.content {\r\n    /*position: fixed;\r\n    bottom: 10%;*/\r\n    background: rgba(0, 0, 0, 0.5);\r\n    color: #f1f1f1;\r\n    width: 100%;\r\n    min-height: 70%;\r\n    padding: 20px;\r\n    text-align: center;\r\n}\r\n#myBtn {\r\n    width: 200px;\r\n    font-size: 18px;\r\n    padding: 10px;\r\n    border: none;\r\n    background: #000;\r\n    color: #fff;\r\n    cursor: pointer;\r\n}\r\n#myBtn:hover {\r\n    background: #ddd;\r\n    color: black;\r\n}"
 
 /***/ }),
 

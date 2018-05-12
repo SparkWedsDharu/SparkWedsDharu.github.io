@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "#myVideo{\r\n\topacity: 50%;\r\n}"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n\r\n<video id=\"myVideo\" autoplay loop controls [innerHtml]=\"htmlToAdd\" >\r\n  <!-- <source *ngIf={{mobdevice}} src=\"./assets/videos/mobilebg.mp4\" type=\"video/mp4\">\r\n  <source *ngIf={{!mobdevice}} src=\"./assets/videos/lightning0.mp4\" type=\"video/mp4\"> -->\r\n\r\n  <!-- <poster src=\"./assets/images/wedding.gif type=\"image/gif\"> -->\r\n  \r\n\r\n</video>\r\n\r\n\r\n<div class=\"content\">\r\n  <app-couple></app-couple>\r\n  <!-- <button id=\"myBtn\" (click)=\"myFunction()\">{{btnText}}</button> -->\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n\r\n<video id=\"myVideo\" autoplay loop controls [innerHtml]=\"htmlToAdd\" >\r\n  <!-- <source *ngIf={{mobdevice}} src=\"./assets/videos/mobilebg.mp4\" type=\"video/mp4\">\r\n  <source *ngIf={{!mobdevice}} src=\"./assets/videos/lightning0.mp4\" type=\"video/mp4\"> -->\r\n\r\n  <!-- <poster src=\"./assets/images/wedding.gif type=\"image/gif\"> -->\r\n  \r\n\r\n</video>\r\n\r\n\r\n<div >\r\n  <app-couple></app-couple>\r\n  <!-- <button id=\"myBtn\" (click)=\"myFunction()\">{{btnText}}</button> -->\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -165,7 +165,7 @@ var AppModule = (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h1:nth-of-type(2){\r\n\tcolor:red;\r\n\r\n}"
+module.exports = "h1:nth-of-type(2){\r\n\tcolor:red;\r\n}\r\nh1:nth-of-type(1){\r\n\tfont-weight: bold;\r\n}\r\n#goal-list{\r\n\ttext-align: center;\r\n}\r\n.wrapper{\r\n\tmargin-top: 20px;\r\n\tbackground: rgba(0, 0, 0, 0.5);\r\n\tmargin-bottom: 10px;\r\n\tcolor: #f1f1f1;\r\n    width: 98%;\r\n    min-height: 70%;\r\n    padding: 20px;\r\n    text-align: center;\r\n    position: fixed;\r\n    border-radius:15px;\r\n}\r\nimg{\r\n\twidth: 180px;\r\n\theight:180px;\r\n\tborder-radius: 10px;\r\n}\r\n.dash-list{\r\n\tpadding:10px;\r\n}"
 
 /***/ }),
 
@@ -176,7 +176,7 @@ module.exports = "h1:nth-of-type(2){\r\n\tcolor:red;\r\n\r\n}"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div >\n  <h1>\n    Spartagus <p>Weds </p> Dharani Sri\n  </h1>\n</div> -->\n\n<div [@goals]=\"goals.length\" id=\"goal-list\">\n\t\t\n\t\t\t<h1 *ngFor= \"let goal of goals\"> {{goal}}</h1>\n\t\t\n\t</div>"
+module.exports = "<!-- <div >\n  <h1>\n    Spartagus <p>Weds </p> Dharani Sri\n  </h1>\n</div> -->\n<div  class=\"container-fluid\">\n\t<div  class=\"wrapper\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-xs-12 col-lg-12\" [@goals]=\"goals.length\" id=\"goal-list\">\t\t\n\t\t\t\t<h1 *ngFor= \"let goal of goals\"> {{goal}}</h1>\n\t\t\t</div>\n\t\t</div>\n\n\t\t<div id=\"dash-list\">\n\t\t\t<div >\n\t\t\t\t<div class=\"row\" [@dash]=\"dash.length\">\n\t\t\t\t\t<div *ngFor= \"let im of dash ; let i = index\" class=\"col-xs-12 col-lg-3 col-md-3 dash-list\">\n\t\t\t\t\t\t<img src={{im}} type=\"image/gif\" (click)=\"displayme(i)\"></div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>"
 
 /***/ }),
 
@@ -210,8 +210,13 @@ var CoupleComponent = (function () {
     // }
     function CoupleComponent() {
         this.goals = ["Spartagus", "Weds", "Dharani Sri"];
+        this.dash = ["../../assets/images/welcome.gif", "../../assets/images/engage.gif", "../../assets/images/wed.gif", "../../assets/images/reception.gif", "../../assets/images/map.gif", "../../assets/images/contact.gif"];
+        this.imagelist = ["welcome", "engagement", "wedding", "reception", "map", "contact"];
     }
     CoupleComponent.prototype.ngOnInit = function () {
+    };
+    CoupleComponent.prototype.displayme = function (index) {
+        alert(index + " , " + this.imagelist[index]);
     };
     CoupleComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -220,6 +225,22 @@ var CoupleComponent = (function () {
             styles: [__webpack_require__(/*! ./couple.component.css */ "./src/app/couple/couple.component.css")],
             animations: [
                 Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["trigger"])('goals', [
+                    Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["transition"])('* => *', [
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: 0 }), { optional: true }),
+                        Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["stagger"])('2500ms', [
+                            Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["animate"])('20s ease-in', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["keyframes"])([
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: 0, transform: 'translateX(50%)', offset: 0 }),
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: .5, transform: 'translateY(35px)', offset: 0.166 }),
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: 0.5, transform: 'translateX(75%)', offset: 0.33 }),
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: .5, transform: 'translateY(335px)', offset: 0.5 }),
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: .5, transform: 'translateX(5%)', offset: 0.666 }),
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: .5, transform: 'translateY(35px)', offset: 0.833 }),
+                                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: 1, transform: 'translateY(0)', offset: 1 })
+                            ]))
+                        ]), { optional: true })
+                    ])
+                ]),
+                Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["trigger"])('dash', [
                     Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["transition"])('* => *', [
                         Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["style"])({ opacity: 0 }), { optional: true }),
                         Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["query"])(':enter', Object(_angular_animations__WEBPACK_IMPORTED_MODULE_1__["stagger"])('2500ms', [
