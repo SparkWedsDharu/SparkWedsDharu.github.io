@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n\r\n<video id=\"myVideo\" autoplay loop [innerHtml]=\"htmlToAdd\" >\r\n  <!-- <source *ngIf={{mobdevice}} src=\"./assets/videos/mobilebg.mp4\" type=\"video/mp4\">\r\n  <source *ngIf={{!mobdevice}} src=\"./assets/videos/lightning0.mp4\" type=\"video/mp4\"> -->\r\n\r\n  <!-- <poster src=\"./assets/images/wedding.gif type=\"image/gif\"> -->\r\n  \r\n\r\n</video>\r\n\r\n\r\n<div class=\"content\">\r\n  <app-couple></app-couple>\r\n  <!-- <button id=\"myBtn\" (click)=\"myFunction()\">{{btnText}}</button> -->\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n\r\n<video id=\"myVideo\" autoplay loop controls [innerHtml]=\"htmlToAdd\" >\r\n  <!-- <source *ngIf={{mobdevice}} src=\"./assets/videos/mobilebg.mp4\" type=\"video/mp4\">\r\n  <source *ngIf={{!mobdevice}} src=\"./assets/videos/lightning0.mp4\" type=\"video/mp4\"> -->\r\n\r\n  <!-- <poster src=\"./assets/images/wedding.gif type=\"image/gif\"> -->\r\n  \r\n\r\n</video>\r\n\r\n\r\n<div class=\"content\">\r\n  <app-couple></app-couple>\r\n  <!-- <button id=\"myBtn\" (click)=\"myFunction()\">{{btnText}}</button> -->\r\n</div>\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -81,7 +81,7 @@ var AppComponent = (function () {
         if (this.mobWidth < 1200) {
             //It is a small screen
             // this.mobdevice = true;
-            this.htmlToAdd = '<source src="./assets/videos/mobilebg.mp4" type="video/mp4">';
+            this.htmlToAdd = "<source src=\"./assets/videos/mobilebg.mp4\" type=\"video/mp4\">\n            <source src=\"./assets/videos/mobilebg.mpg\" type=\"video/mpg\">\n            <source src=\"./assets/videos/mobilebg.flv\" type=\"video/flv\">\n            <source src=\"./assets/videos/mobilebg.avi\" type=\"video/avi\">\n            <source src=\"./assets/videos/mobilebg.3gp\" type=\"video/3gp\"> ";
         }
         else {
             //It is a big screen or desktop
